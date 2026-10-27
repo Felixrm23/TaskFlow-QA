@@ -22,9 +22,9 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Levantar servidor en segundo plano
+      - name: Levantar servidor en segundo plano de forma limpia
         run: |
-          npm run dev &
+          nohup npm run dev > server.log 2>&1 &
           npx wait-on http://127.0.0.1:3000
 
       - name: Ejecutar pruebas nativas
