@@ -7,7 +7,8 @@
     "start": "tsx src/server.ts",
   "dev": "tsx watch src/server.ts",
     "test": "npx playwright test",
-    "test:security": "tsx run-tests.ts"
+    "test:security": "tsx run-tests.ts && node --test test-native.mjs"
+    
   },
   "keywords": [],
   "author": "",
